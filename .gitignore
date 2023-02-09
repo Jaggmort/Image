@@ -73,5 +73,6 @@ venv/
 # Emacs backup
 *~
 
-# Local Images
+# Local 
+.env
 images/
