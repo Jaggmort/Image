@@ -10,6 +10,12 @@ Python3 should be already installed. Then use pip (or pip3, if there is a confli
 pip install -r requirements.txt
 ```
 
+U should put in .env correct infomation
+
+``` NASA_API_KEY - Ur Nasa Api Key ```
+``` SLEEP_TIMER - Period which u use for send_photo ```
+``` TELEGRAM_TOKEN - Ur Telegram Token ```
+
 ### How to use ###
 
 Download EPIC:
