@@ -19,4 +19,4 @@ def create_directory(directory):
 def get_extension(url):
     parse = urlparse(url)
     extension = os.path.splitext(parse.path)
-    return extension    
+    return extension[1]    

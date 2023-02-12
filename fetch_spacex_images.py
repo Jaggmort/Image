@@ -18,7 +18,7 @@ def fetch_spacex_image(launch_number='latest'):
     response.raise_for_status()
     image_links = response.json()['links']['flickr']['original']
     for index_number, image_link in enumerate(image_links):
-        common_utils.get_image(image_link, f'Images/spacex_{index_number}{common_utils.get_extension(image_link)[1]}')
+        common_utils.get_image(image_link, f'Images/spacex_{index_number}{common_utils.get_extension(image_link)}')
     return
 
 if __name__=='__main__':
