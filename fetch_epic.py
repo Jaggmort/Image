@@ -5,7 +5,13 @@ from dotenv import load_dotenv
 from urllib.parse import urlparse
 
 
-def fetch_epic():
+def main():
+    load_dotenv()
+    params = {'api_key':f"{os.environ.get('NASA_API_KEY')}"}
+    common_utils.create_directory('Images')
+    fetch_epic(params)
+
+def fetch_epic(params):
     response = requests.get('https://api.nasa.gov/EPIC/api/natural/images',params=params) 
     epic_links = response.json()
     for epic_link in epic_links:
@@ -16,8 +22,4 @@ def fetch_epic():
     return
 
 if __name__=='__main__':
-    load_dotenv()
-    NASA_API_KEY = os.environ.get('NASA_API_KEY')
-    params = {'api_key':NASA_API_KEY}
-    common_utils.create_directory('Images')
-    fetch_epic()
+    main()
