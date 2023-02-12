@@ -20,9 +20,9 @@ def fetch_planetary(params):
     response = requests.get('https://api.nasa.gov/planetary/apod',params=params) 
     response.raise_for_status()
     image_links = response.json()
-    for id, image_link in enumerate(image_links):
+    for index_number, image_link in enumerate(image_links):
         k=image_link['url']
-        common_utils.get_image(image_link['url'], f'Images/planetary_{id}{common_utils.get_extension(k)[1]}') 
+        common_utils.get_image(image_link['url'], f'Images/planetary_{index_number}{common_utils.get_extension(k)[1]}') 
     return
 
 if __name__=='__main__':
