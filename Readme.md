@@ -27,7 +27,7 @@ python fetch_epic.py
 Download SpaceX:
 
 ```python
-python fetch__spacex_images.py --id 5eb87d47ffd86e000604b38a
+python fetch_spacex_images.py --id 5eb87d47ffd86e000604b38a
 ```
 Module will download images of launch with id '5eb87d47ffd86e000604b38a'
 
