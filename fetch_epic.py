@@ -13,6 +13,7 @@ def main():
 
 def fetch_epic(params):
     response = requests.get('https://api.nasa.gov/EPIC/api/natural/images',params=params) 
+    response.raise_for_status()
     epic_links = response.json()
     for epic_link in epic_links:
         date = epic_link['date']

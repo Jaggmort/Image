@@ -15,6 +15,7 @@ def main():
 
 def fetch_spacex_image(id='latest'):
     response = requests.get(f'https://api.spacexdata.com/v5/launches/{id}')
+    response.raise_for_status()
     image_links = response.json()['links']['flickr']['original']
     for id, image_link in enumerate(image_links):
         common_utils.get_image(image_link, f'Images/spacex_{id}{common_utils.get_extension(image_link)[1]}')

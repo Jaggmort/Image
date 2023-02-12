@@ -18,6 +18,7 @@ def main():
 
 def fetch_planetary(params):
     response = requests.get('https://api.nasa.gov/planetary/apod',params=params) 
+    response.raise_for_status()
     image_links = response.json()
     for id, image_link in enumerate(image_links):
         k=image_link['url']
