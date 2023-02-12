@@ -16,7 +16,8 @@ def send_photo(Image):
     chat_id = os.environ.get('CHAT_ID')
     telegram_token = os.environ.get('TELEGRAM_TOKEN')
     bot = telegram.Bot(token=telegram_token)
-    bot.send_document(chat_id=chat_id, document=open(Image, 'rb'))
+    with open (Image, 'rb') as document:
+        bot.send_document(chat_id=chat_id, document=document)
 
 
 
