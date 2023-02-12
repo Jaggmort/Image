@@ -15,6 +15,7 @@ U should put in .env correct infomation
 ``` NASA_API_KEY - Ur Nasa Api Key ```
 ``` SLEEP_TIMER - Period which u use for send_photo ```
 ``` TELEGRAM_TOKEN - Ur Telegram Token ```
+``` CHAT_ID - ID of chat where u want to post pictures```
 
 ### How to use ###
 
