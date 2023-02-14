@@ -16,9 +16,8 @@ def main():
 
 def get_images():
     images = (os.walk('Images'))
-    available_images = []
     for image in images:
-        available_images.append(image[2])
+        __, __, available_images= image
     return available_images
 
 def send_photo(Image, chat_id, telegram_token):
