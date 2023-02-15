@@ -21,7 +21,8 @@ def fetch_planetary(params):
     response.raise_for_status()
     image_links = response.json()
     for index_number, image_link in enumerate(image_links):
-        common_utils.get_image(image_link['url'], f"Images/planetary_{index_number}{common_utils.get_extension(image_link['url'])}") 
+        prepared_url =  f"Images/planetary_{index_number}{common_utils.get_extension(image_link['url'])}"
+        common_utils.get_image(image_link['url'], prepared_url) 
     return
 
 if __name__=='__main__':

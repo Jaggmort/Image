@@ -19,7 +19,8 @@ def fetch_epic(params):
         date = epic_link['date']
         image = epic_link['image']
         image_png = f'images/{image}.png'
-        common_utils.get_image(f'https://api.nasa.gov/EPIC/archive/natural/{date[0:4]}/{date[5:7]}/{date[8:10]}/png/{image}.png',image_png, params)
+        prepared_url = f'https://api.nasa.gov/EPIC/archive/natural/{date[0:4]}/{date[5:7]}/{date[8:10]}/png/{image}.png'
+        common_utils.get_image(prepared_url,image_png, params)
     return
 
 if __name__=='__main__':
